@@ -1,0 +1,8 @@
+#!/bin/sh -eu
+
+SCRIPTS="app.py"
+
+for script in $SCRIPTS ; do
+   echo "$script:"
+   mypy --strict --ignore-missing-imports $script
+done

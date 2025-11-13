@@ -1,0 +1,8 @@
+ecg-plot
+gradio
+matplotlib
+neurokit2
+Pillow
+pydantic==2.10.6
+torch
+git+https://github.com/dreibh/deepfake-ecg@dreibh/clean-ups#egg=deepfake_ecg
