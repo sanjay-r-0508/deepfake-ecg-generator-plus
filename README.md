@@ -16,11 +16,23 @@
 ## Deepfake ECG Generator GUI
 
 This application allows you to generate synthetic ECGs based on the research paper:  
-[https://www.nature.com/articles/s41598-021-01295-2](https://www.nature.com/articles/s41598-021-01295-2)
+[https://www.nature.com/articles/s41598-021-01295-2].
 
 ---
 
 ## Run Locally
 
 ### Prepare virtual environment and install dependencies
+``bash
+mkdir -p ~/python-environments/deepfake-ecg
+python3 -m venv ~/python-environments/deepfake-ecg
+. ~/python-environments/deepfake-ecg/bin/activate
+pip install -r requirements.txt
+```
+
+## Run the application
+```bash
+./app.py
+```
+Then, connect a web browser to [http://127.0.0.1:7860/](http://127.0.0.1:7860/) to use the application
 
