@@ -74,20 +74,20 @@
 ### 3. Technical Challenges & Solutions
 
 #### Challenge 1: Multi-User Session Management
--- **Problem**: Multiple users need isolated sessions with temporary file storage
--- **Solution**: Implemented session dictionary with unique hashes, thread-safe operations, and automatic cleanup
+- **Problem**: Multiple users need isolated sessions with temporary file storage
+- **Solution**: Implemented session dictionary with unique hashes, thread-safe operations, and automatic cleanup
 
 #### Challenge 2: Memory Management
--- **Problem**: Matplotlib figures and large tensors can cause memory leaks
--- **Solution**: Explicit figure closure, CPU offloading after GPU processing, automatic temporary directory cleanup
+- **Problem**: Matplotlib figures and large tensors can cause memory leaks
+- **Solution**: Explicit figure closure, CPU offloading after GPU processing, automatic temporary directory cleanup
 
 #### Challenge 3: Large-Scale Data Visualization
--- **Problem**: Displaying multiple ECGs with high temporal resolution (500 Hz sampling)
+- **Problem**: Displaying multiple ECGs with high temporal resolution (500 Hz sampling)
 -- **Solution**: Dynamic matplotlib tick configuration, efficient image generation (WebP format), lazy loading of analysis
 
 #### Challenge 4: GPU/CPU Compatibility
--- **Problem**: Application should work with or without GPU
--- **Solution**: Automatic device detection with CUDA fallback to CPU, command-line override option
+- **Problem**: Application should work with or without GPU
+- **Solution**: Automatic device detection with CUDA fallback to CPU, command-line override option
 
 ---
 
