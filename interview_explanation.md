@@ -183,6 +183,86 @@
 ### Q: "What's the practical use case?"
 **A**: "The primary use case is generating synthetic medical data for research and training purposes. Real patient ECG data is sensitive and subject to strict privacy regulations. By generating realistic synthetic data, researchers can train machine learning models, develop new algorithms, and create educational materials without privacy concerns. It's particularly useful for creating large datasets for deep learning model training."
 
+### Q: Write a code for this project
+For this project, if they ask you to “write code”, it’s safest to be ready to write small, clear Python functions that match what the app does:
+
+1) Simple function to generate ECGs (using a model)
+You can write something like this (even if you don’t remember exact API names, the structure matters):
+
+```python
+import torch
+import deepfakeecg  # library from the project
+
+def generate_ecg_batch(num_ecg: int = 4,
+                       ecg_type: str = "ECG-12",
+                       device: str = "cuda" if torch.cuda.is_available() else "cpu"):
+    # map string to library constant
+    if ecg_type == "ECG-8":
+        data_type = deepfakeecg.DATA_ECG8
+    else:
+        data_type = deepfakeecg.DATA_ECG12
+
+    ecg_length_seconds = 10
+
+    # call the deepfakeecg generator (core idea)
+    results = deepfakeecg.generateDeepfakeECGs(
+        numberOfECGs       = num_ecg,
+        ecgType            = data_type,
+        ecgLengthInSeconds = ecg_length_seconds,
+        ecgScaleFactor     = deepfakeecg.ECG_DEFAULT_SCALE_FACTOR,
+        outputFormat       = deepfakeecg.OUTPUT_TENSOR,
+        showProgress       = False,
+        runOnDevice        = device,
+    )
+
+    return results  # list of torch.Tensors
+```
+
+2) Convert one ECG tensor to a NumPy array and basic plot
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def tensor_to_numpy_leads(ecg_tensor: torch.Tensor) -> np.ndarray:
+    # shape: [channels, samples]; channel 0 = timestamps, 1+ = leads
+    data = ecg_tensor.t().detach().cpu().numpy()  # [time, channels]
+    leads_mv = data[1:] / 1000.0  # drop time, convert µV→mV
+    return leads_mv
+
+def plot_single_lead(leads_mv: np.ndarray, lead_index: int = 0, fs: int = deepfakeecg.ECG_SAMPLING_RATE):
+    lead = leads_mv[lead_index]
+    t = np.arange(len(lead)) / fs
+    plt.figure(figsize=(8, 3))
+    plt.plot(t, lead)
+    plt.xlabel("Time (s)")
+    plt.ylabel("mV")
+    plt.title("Synthetic ECG Lead")
+    plt.grid(True)
+    plt.show()
+```
+
+3) Tiny Gradio demo (optional, if they ask about the UI)
+
+```python
+import gradio as gr
+
+def demo_generate(num_ecg: int):
+    tensors = generate_ecg_batch(num_ecg)
+    first = tensor_to_numpy_leads(tensors[0])
+    # return just shape or simple info in an interview
+    return f"Generated {num_ecg} ECGs, first shape = {first.shape}"
+
+with gr.Blocks() as demo:
+    slider = gr.Slider(1, 10, value=4, step=1, label="Number of ECGs")
+    out = gr.Textbox(label="Info")
+    btn = gr.Button("Generate")
+    btn.click(fn=demo_generate, inputs=slider, outputs=out)
+
+if __name__ == "__main__":
+    demo.launch()
+
+```
 ---
 
 ## 📊 Technical Metrics to Mention (If Asked)
