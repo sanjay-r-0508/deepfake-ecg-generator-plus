@@ -1,187 +1,342 @@
-# ❤️ DeepFake ECG Generator Plus
+# ❤️ DeepFake ECG Generator Plus: AI-Powered Synthetic ECG Generation and Analysis
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" />
-  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg" />
-  <img src="https://img.shields.io/badge/Gradio-Web%20UI-orange.svg" />
+  <img src="https://img.shields.io/badge/Python-3.10+-blue">
+  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red">
+  <img src="https://img.shields.io/badge/Gradio-Web%20Application-orange">
+  <img src="https://img.shields.io/badge/Healthcare-AI-green">
+  <img src="https://img.shields.io/badge/Synthetic%20Data-Generation-purple">
 </p>
 
 <p align="center">
-  <b>AI-Powered Synthetic ECG Generation, Visualization, Analysis, and Export Platform</b>
+  <b>AI-Powered Platform for Synthetic ECG Generation, Visualization, Analysis, and Export</b>
 </p>
 
+---
+
+# 📖 Overview
+
+DeepFake ECG Generator Plus is an AI-powered healthcare application designed to generate realistic synthetic Electrocardiogram (ECG) signals using Deep Learning models.
+
+The platform provides an interactive web interface for:
+
+- Synthetic ECG Generation
+- ECG Visualization
+- ECG Analysis
+- ECG Report Generation
+- CSV and PDF Export
+
+The system enables researchers, healthcare professionals, biomedical engineers, and students to generate privacy-preserving ECG datasets without exposing sensitive patient information.
 
 ---
 
-## 🚀 Overview
+# ✨ Why DeepFake ECG Generator Plus?
 
-DeepFake ECG Generator Plus is an interactive Gradio application that leverages Deep Learning models to generate realistic synthetic ECG signals. The application supports both ECG-8 and ECG-12 lead configurations, provides automatic signal analysis, and allows exporting generated ECGs in multiple formats.
+🔹 Privacy-Preserving ECG Data Generation
 
-### 🎯 Use Cases
+🔹 AI-Based Synthetic ECG Creation
 
-- Medical AI Research
-- Synthetic Healthcare Data Generation
-- Privacy-Preserving ECG Datasets
-- Educational & Academic Research
-- Biomedical Signal Processing
-- Machine Learning Model Development & Testing
+🔹 ECG-8 and ECG-12 Lead Support
 
----
+🔹 Interactive Gradio Dashboard
 
-## ✨ Features
+🔹 Automated ECG Analysis
 
-### 🔹 Synthetic ECG Generation
-- Generate realistic AI-generated ECG signals
-- Support for:
-  - ECG-8 Lead
-  - ECG-12 Lead
-- Generate multiple ECG samples at once
+🔹 CSV and PDF Export
 
-### 🔹 ECG Visualization
-- High-quality ECG plotting
-- Clinical-style ECG layouts
-- Interactive ECG gallery view
+🔹 Healthcare AI Research Ready
 
-### 🔹 ECG Analysis
-- Automatic ECG signal processing
-- NeuroKit2-based ECG analysis
-- Visualization of ECG characteristics
-
-### 🔹 Export Functionality
-- Download ECG data as:
-  - CSV
-  - PDF
-  - PDF with Analysis
-
-### 🔹 Modern Web Interface
-- Built with Gradio
-- User-friendly interface
-- Session-based management
+🔹 Educational and Clinical Applications
 
 ---
 
-## 🏗️ System Architecture
+# 🚨 Problem Statement
+
+Healthcare AI systems require large-scale ECG datasets for:
+
+- Disease Detection
+- Deep Learning Training
+- Medical Education
+- Biomedical Research
+- Signal Processing Studies
+
+However:
+
+- Real ECG datasets are limited
+- Privacy regulations restrict access
+- Medical data sharing is highly regulated
+- Annotated ECG datasets are expensive
+
+DeepFake ECG Generator Plus addresses these challenges through realistic synthetic ECG generation while maintaining patient privacy.
+
+---
+
+# 🎯 Key Features
+
+## 🫀 Synthetic ECG Generation
+
+✅ Generate realistic AI-generated ECG signals
+
+✅ ECG-8 Lead Support
+
+✅ ECG-12 Lead Support
+
+✅ Multi-Sample ECG Generation
+
+✅ Deep Learning-Based Signal Synthesis
+
+---
+
+## 📊 ECG Visualization
+
+✅ Clinical ECG Layout Rendering
+
+✅ Multi-Lead ECG Plotting
+
+✅ Interactive ECG Gallery
+
+✅ High-Resolution Signal Visualization
+
+---
+
+## 🔍 ECG Analysis
+
+✅ ECG Signal Processing
+
+✅ Heartbeat Detection
+
+✅ ECG Waveform Analysis
+
+✅ Feature Extraction
+
+✅ NeuroKit2 Integration
+
+---
+
+## 📄 Export Functionality
+
+✅ Export ECG as CSV
+
+✅ Generate PDF Reports
+
+✅ Export Analysis Reports
+
+---
+
+## 🌐 User Interface
+
+✅ Gradio Web Application
+
+✅ Interactive Dashboard
+
+✅ User-Friendly Workflow
+
+---
+
+# 🏗️ System Architecture
 
 ```text
-┌──────────────────────┐
-│      Gradio UI       │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│   DeepFake ECG Model │
-│      (PyTorch)       │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ ECG Signal Generator │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ ECG Visualization    │
-│ Matplotlib + ECGPlot │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ ECG Analysis         │
-│     NeuroKit2        │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Export CSV / PDF     │
-└──────────────────────┘
+User Input
+     │
+     ▼
+Gradio Interface
+     │
+     ▼
+DeepFake ECG Model
+     │
+     ▼
+Synthetic ECG Generator
+     │
+     ▼
+Signal Processing Engine
+     │
+     ▼
+ECG Visualization
+     │
+     ▼
+ECG Analysis Module
+     │
+     ▼
+CSV / PDF Export
 ```
 
 ---
 
-## 🛠️ Tech Stack
+# 🔄 Workflow
 
-### Programming Language
-- Python
-
-### Deep Learning Framework
-- PyTorch
-
-### Frontend Framework
-- Gradio
-
-### Data Visualization
-- Matplotlib
-- ECG Plot
-
-### Signal Processing
-- NeuroKit2
-
-### Image Processing
-- Pillow
-
-### Synthetic Data Generation
-- DeepFake ECG
+```text
+Select ECG Type
+       │
+       ▼
+Choose Number of Samples
+       │
+       ▼
+Generate Synthetic ECG
+       │
+       ▼
+Visualize ECG Signals
+       │
+       ▼
+Analyze ECG
+       │
+       ▼
+Download Results
+```
 
 ---
 
-## 📂 Project Structure
+# 🫀 Supported ECG Types
+
+## ECG-8 Lead
+
+Generates synthetic ECG signals with 8 leads suitable for:
+
+- Signal Processing Research
+- Healthcare AI
+- Biomedical Engineering Education
+- Academic Projects
+
+---
+
+## ECG-12 Lead
+
+Generates complete 12-lead ECG recordings commonly used in hospitals and diagnostic centers.
+
+Suitable for:
+
+- Cardiac Analysis
+- Clinical Research
+- AI Model Development
+- Healthcare Analytics
+
+---
+
+# ⚙️ Core Modules
+
+## ECG Generation Module
+
+Responsible for:
+
+- Signal Synthesis
+- Deep Learning Inference
+- Multi-Lead ECG Generation
+- Synthetic Data Creation
+
+---
+
+## ECG Visualization Module
+
+Responsible for:
+
+- Waveform Rendering
+- ECG Layout Generation
+- Multi-Lead Display
+- Clinical Visualization
+
+---
+
+## ECG Analysis Module
+
+Responsible for:
+
+- Signal Cleaning
+- Heartbeat Detection
+- ECG Component Analysis
+- Feature Extraction
+- Waveform Interpretation
+
+---
+
+## Export Module
+
+Responsible for:
+
+- CSV Export
+- PDF Generation
+- Analysis Reports
+- Data Sharing
+
+---
+
+# 🛠️ Technology Stack
+
+## Programming Language
+
+- Python
+
+## Deep Learning
+
+- PyTorch
+
+## Web Framework
+
+- Gradio
+
+## Signal Processing
+
+- NeuroKit2
+
+## Data Analysis
+
+- NumPy
+- Pandas
+
+## Visualization
+
+- Matplotlib
+
+## Image Processing
+
+- Pillow
+
+---
+
+# 📂 Project Structure
 
 ```text
 DeepFake-ECG-Generator-Plus/
 │
-├── .gitattributes          # Git configuration attributes
-├── README.md               # Project documentation
-├── app.py                  # Main Gradio application and ECG generation logic
-├── check-with-mypy         # Static type checking script/configuration
-├── requirements.txt        # Python dependencies
-├── test.css                # Custom UI styling
-├── test.html               # UI layout testing page
-└── version.py              # Application version information
+├── .gitattributes
+├── README.md
+├── app.py
+├── check-with-mypy
+├── requirements.txt
+├── test.css
+├── test.html
+└── version.py
 ```
-
-### File Description
-
-| File | Purpose |
-|--------|---------|
-| `app.py` | Main application logic and Gradio interface |
-| `version.py` | Version information |
-| `requirements.txt` | Project dependencies |
-| `test.css` | Custom UI styling |
-| `test.html` | HTML layout testing |
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### 1️⃣ Clone Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/deepfake-ecg-generator-plus.git
+git clone https://github.com/yourusername/DeepFake-ECG-Generator-Plus.git
 
-cd deepfake-ecg-generator-plus
+cd DeepFake-ECG-Generator-Plus
 ```
 
-### 2️⃣ Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 3️⃣ Activate Virtual Environment
-
-#### Windows
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-#### Linux / macOS
+### Linux/macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-### 4️⃣ Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -189,17 +344,13 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Application
-
-Start the Gradio application:
+# ▶️ Running the Application
 
 ```bash
 python app.py
 ```
 
-The application will launch locally.
-
-Open your browser and visit:
+After launching the application, open:
 
 ```text
 http://localhost:7860
@@ -207,166 +358,190 @@ http://localhost:7860
 
 ---
 
-## 📊 Application Workflow
+# 📸 Screenshots
 
-### Step 1
-Choose ECG Type
-
-- ECG-8
-- ECG-12
-
-### Step 2
-Select Number of ECGs to Generate
-
-### Step 3
-Generate Synthetic ECG Signals
-
-### Step 4
-View Generated ECGs
-
-### Step 5
-Analyze ECG Signals
-
-### Step 6
-Download Results
-
-Available formats:
-
-- CSV
-- PDF
-- PDF with Analysis
-
----
-
-## 📸 Screenshots
-
-Add screenshots of your application here.
-
-```text
-screenshots/
-├── home.png
-├── generated_ecg.png
-├── analysis.png
-```
-
-Example:
+## Home Page
 
 ```markdown
 ![Home Page](screenshots/home.png)
+```
 
-![Generated ECG](screenshots/generated_ecg.png)
+## ECG Generation
 
-![Analysis](screenshots/analysis.png)
+```markdown
+![ECG Generation](screenshots/generation.png)
+```
+
+## ECG Analysis
+
+```markdown
+![ECG Analysis](screenshots/analysis.png)
 ```
 
 ---
 
-## 🔬 Research Applications
+# 📈 Results
 
-### Healthcare AI
-Generate synthetic ECG data for AI model training.
+The platform successfully generates realistic ECG waveforms suitable for research and educational applications.
 
-### Medical Education
-Use ECG samples for learning and teaching.
-
-### Biomedical Research
-Study ECG characteristics without exposing patient data.
-
-### Dataset Augmentation
-Expand limited ECG datasets using synthetic data generation.
-
-### Privacy Preservation
-Create realistic ECG signals without revealing sensitive patient information.
+| Capability | Status |
+|------------|---------|
+| ECG Generation | ✅ |
+| ECG Visualization | ✅ |
+| ECG Analysis | ✅ |
+| CSV Export | ✅ |
+| PDF Export | ✅ |
+| Multi-Lead ECG Support | ✅ |
 
 ---
 
-## 🚀 Future Enhancements
+# 🔬 Research Impact
 
-- ECG Abnormality Injection
-- Real-Time ECG Generation
-- Cloud Deployment
-- ECG Classification Models
-- GAN Evaluation Metrics
-- ECG Similarity Scoring
-- REST API Support
-- Multi-User Dashboard
-- ECG Data Export in JSON Format
+This project contributes to Healthcare AI by enabling:
 
----
+- Synthetic Medical Data Generation
+- Privacy-Preserving Machine Learning
+- ECG Signal Research
+- Biomedical Engineering Education
+- AI-Based Cardiac Analytics
 
-## 📈 Performance Highlights
+Generated ECG signals can be used for:
 
-✅ AI-Based Synthetic ECG Generation
-
-✅ ECG-8 and ECG-12 Support
-
-✅ Interactive Visualization
-
-✅ Automated Signal Analysis
-
-✅ Multiple Export Formats
-
-✅ Lightweight Web Interface
+- Deep Learning Model Training
+- Academic Research
+- Healthcare Innovation
+- Medical Education
+- Signal Processing Experiments
 
 ---
 
-## 🤝 Contributing
+# 📊 Applications
 
-Contributions are welcome!
+## Healthcare AI
 
-### Fork Repository
+- ECG Classification
+- Disease Prediction
+- Deep Learning Model Training
 
-```bash
-git fork
-```
+## Medical Education
 
-### Create New Branch
+- ECG Interpretation Training
+- Biomedical Engineering Labs
+- Clinical Simulation
 
-```bash
-git checkout -b feature/new-feature
-```
+## Biomedical Research
 
-### Commit Changes
+- Signal Processing Research
+- Healthcare Analytics
+- Synthetic Dataset Creation
 
-```bash
-git commit -m "Added new feature"
-```
+## Privacy-Preserving AI
 
-### Push Changes
-
-```bash
-git push origin feature/new-feature
-```
-
-### Open Pull Request
-
-Submit your pull request for review.
-
+- Safe Dataset Sharing
+- HIPAA-Friendly Research
+- GDPR-Compliant Data Generation
 
 ---
 
-## 🙏 Acknowledgements
+# 📈 Benefits
 
-- DeepFake ECG Project
-- PyTorch Community
+### Privacy Protection
+
+No real patient information is exposed.
+
+### Unlimited Data Generation
+
+Generate thousands of ECG samples on demand.
+
+### Cost Effective
+
+Reduces dependency on expensive clinical datasets.
+
+### Research Friendly
+
+Ideal for AI and healthcare research projects.
+
+---
+
+# 🛣️ Roadmap
+
+## Version 1.0
+
+- [x] Synthetic ECG Generation
+- [x] ECG Visualization
+- [x] ECG Analysis
+- [x] CSV Export
+- [x] PDF Export
+
+## Version 2.0
+
+- [ ] ECG Disease Simulation
+- [ ] REST API Integration
+- [ ] Docker Support
+- [ ] Cloud Deployment
+- [ ] User Authentication
+
+## Version 3.0
+
+- [ ] Real-Time ECG Monitoring
+- [ ] ECG Classification Models
+- [ ] Explainable Healthcare AI Dashboard
+- [ ] Mobile Application
+
+---
+
+# 📊 Repository Statistics
+
+| Category | Details |
+|-----------|----------|
+| Domain | Healthcare AI |
+| Type | Deep Learning Project |
+| Language | Python |
+| Framework | Gradio |
+| Deep Learning | PyTorch |
+| Signal Processing | NeuroKit2 |
+| Visualization | Matplotlib |
+| Status | Active Development |
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to:
+
+- DeepFake ECG Research Community
+- PyTorch Team
 - Gradio Team
-- NeuroKit2 Developers
-- Open Source Medical AI Community
+- NeuroKit2 Contributors
+- Open Source Healthcare AI Community
+
+
+# 📬 Contact
+
+### Sanjay R
+
+📧 Email: sanjayrao0508@gmail.com
+
+💼 LinkedIn: https://www.linkedin.com/in/sanjayr0508
+
+💻 GitHub: https://github.com/sanjay-r-0508
 
 ---
 
-## ⭐ Support the Project
+# ⭐ Support
 
-If you find this project useful:
+If you found this project useful:
 
-⭐ Star the repository
+⭐ Star the Repository
 
-🍴 Fork the repository
+🍴 Fork the Repository
 
-📢 Share it with others
+📢 Share with Researchers and Students
 
-💡 Contribute new features
+🚀 Contribute New Features
 
 ---
 
-### ❤️ Generate Synthetic ECGs with AI
+<p align="center">
+<b>🫀 Advancing Healthcare AI Through Synthetic ECG Generation 🫀</b>
+</p>
