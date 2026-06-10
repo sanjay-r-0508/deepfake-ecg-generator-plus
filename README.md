@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" />
   <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg" />
   <img src="https://img.shields.io/badge/Gradio-Web%20UI-orange.svg" />
-  <img src="https://img.shields.io/badge/License-GPL%20v3-green.svg" />
 </p>
 
 <p align="center">
