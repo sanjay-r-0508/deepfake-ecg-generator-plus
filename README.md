@@ -1,6 +1,16 @@
 # ❤️ DeepFake ECG Generator Plus
 
-A web-based AI-powered application for generating, visualizing, analyzing, and exporting synthetic Electrocardiogram (ECG) signals using Deep Learning.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" />
+  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red.svg" />
+  <img src="https://img.shields.io/badge/Gradio-Web%20UI-orange.svg" />
+  <img src="https://img.shields.io/badge/License-GPL%20v3-green.svg" />
+</p>
+
+<p align="center">
+  <b>AI-Powered Synthetic ECG Generation, Visualization, Analysis, and Export Platform</b>
+</p>
+
 
 ---
 
