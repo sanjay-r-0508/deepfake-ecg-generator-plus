@@ -120,15 +120,14 @@ DeepFake ECG Generator Plus is an interactive Gradio application that leverages 
 ```text
 DeepFake-ECG-Generator-Plus/
 │
-├── app.py
-├── version.py
-├── requirements.txt
-├── test.css
-├── test.html
-│
-├── assets/
-│
-└── README.md
+├── .gitattributes          # Git configuration attributes
+├── README.md               # Project documentation
+├── app.py                  # Main Gradio application and ECG generation logic
+├── check-with-mypy         # Static type checking script/configuration
+├── requirements.txt        # Python dependencies
+├── test.css                # Custom UI styling
+├── test.html               # UI layout testing page
+└── version.py              # Application version information
 ```
 
 ### File Description
